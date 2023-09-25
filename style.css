@@ -14,11 +14,26 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     height: 100vh;
 }
 
-.square {
-    height: 2rem;
-    width: 2rem;
-    border: 2px solid blue;
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 30.1rem;
+    border: 1px solid #000;
+}
+
+.grid-square {
+    padding: 0;
+    /* Dynamic column width based on parent width*/
+    width: calc(100% / var(--grid-size));
+    /* Set height equal to width */
+    padding-bottom: calc(100% / var(--grid-size) - 1.6px);
+    border: 1px solid #000;
+}
+
+.grid-square:hover {
+    background-color: red;
 }
