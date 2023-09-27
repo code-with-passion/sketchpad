@@ -32,8 +32,5 @@ html {
     /* Set height equal to width */
     padding-bottom: calc(100% / var(--grid-size) - 1.6px);
     border: 1px solid #000;
-}
-
-.grid-square:hover {
-    background-color: red;
+    background-color: var(--grid-color);
 }
